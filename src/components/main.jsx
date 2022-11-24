@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Style.css";
 const Main = () => {
   const [location, setLocation] = useState("tehran");
   const [data, setDAta] = useState();
@@ -56,13 +55,13 @@ let img =data?data.weather[0].main : "weather"
 
   return (
     <div>
-      <div className="container mt-5 p-0  ">
+      <div className="container mt-5 p-0">
         <div className="row justify-content-center">
           <div className="col-md-6 text-center">
             <div className="card text-white border-0 ">
               <img
                 src={`https://source.unsplash.com/600x900/?${img}`}
-                style={{ height: "400px" }}
+                style={{ height: "500px" }}
                 className="card-img img-fluid"
                 alt="..."
               />
@@ -88,7 +87,7 @@ let img =data?data.weather[0].main : "weather"
                     </button>
                   </div>
                 </form>
-                <div className="bg-dark bg-opacity-50  p-1">
+                <div className="bg-dark bg-opacity-50 h-75 p-1">
                   <h3 className="card-title">{data ? data.name : null}</h3>
                   <p>{day} , {month}{getDate} , {year}</p>
                   <p>{time}</p>
