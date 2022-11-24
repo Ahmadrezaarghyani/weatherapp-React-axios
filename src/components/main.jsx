@@ -36,7 +36,7 @@ const Main = () => {
         emoji = "fa-sun"
      }
      else{
-        emoji = "LOADING..."
+        emoji = "LOADING...."
      }
   }
 
