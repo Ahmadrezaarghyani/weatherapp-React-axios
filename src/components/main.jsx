@@ -54,10 +54,10 @@ const Main = () => {
 let img =data?data.weather[0].main : "weather"
 
   return (
-    <div>
-      <div className=" container mt-5 p-0">
+    <div className="bg-dark" style={{height:"100vh"}}>
+      <div className=" container  p-0 ">
         <div className="row justify-content-center">
-          <div className="col-md-6 text-center">
+          <div className="col-md-6 mt-5 text-center">
             <div className="card text-white border-0 ">
               <img
                 src={`https://source.unsplash.com/600x900/?${img}`}
@@ -101,7 +101,7 @@ let img =data?data.weather[0].main : "weather"
                   
                   </p>
                   <p className="card-text">
-                    {data ? ((data.main.temp -  32)*5/9).toFixed(2): null}&deg;<span>C</span>
+                    {data ? ((data.main.temp -  32)*5/9).toFixed(): null}&deg;<span>C</span>
                   </p>
                 </div>
               </div>
